@@ -1,26 +1,27 @@
 import * as React from 'react';
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import UnderlineLink from '@/components/links/UnderlineLink';
 
 const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
+  { href: '/', label: 'WORK' },
+  { href: '/', label: 'OUR STACK' },
+  { href: '/', label: 'PRODUCTS' },
+  { href: '/', label: 'SERVICES' },
+  { href: '/', label: 'ABOUT US' },
+  { href: '/', label: 'CONTACT US' },
 ];
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
-        </UnstyledLink>
-        <nav>
-          <ul className='flex items-center justify-between space-x-4'>
+    <header className='sticky top-0 z-50 bg-black'>
+      <div className='layout flex h-14 items-center'>
+        <nav className='min-w-full'>
+          <ul className='space-between flex min-w-full max-w-7xl justify-between text-white'>
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
-                <UnstyledLink href={href} className='hover:text-gray-600'>
-                  {label}
-                </UnstyledLink>
+                <UnderlineLink href={href} className='flex-1 font-bold'>
+                  <h5>{label}</h5>
+                </UnderlineLink>
               </li>
             ))}
           </ul>

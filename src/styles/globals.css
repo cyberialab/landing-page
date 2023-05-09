@@ -41,18 +41,28 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  @font-face {
+    font-family: 'Anton';
+    src: url('/fonts/Anton-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Didactic Gothic', sans-serif;
+    src: url('/fonts/DidacticGothic-Regular.ttf') format('truetype');
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
 
   /* #region  /**=========== Typography =========== */
   .h0 {
-    @apply font-primary text-3xl font-bold md:text-5xl;
+    font-family: 'Didactic Gothic', sans-serif;
   }
 
   h1,
   .h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
+    font-family: 'Didactic Gothic', sans-serif;
   }
 
   h2,
@@ -78,7 +88,7 @@
 
   .layout {
     /* 1100px */
-    max-width: 68.75rem;
+    max-width: 80rem;
     @apply mx-auto w-11/12;
   }
 
@@ -115,4 +125,15 @@
   .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
   }
+}
+
+.custom-link {
+  font-family: 'Anton', sans-serif;
+}
+
+.hero-video-frame {
+  max-width: 260px;
+}
+.hero-video-header {
+  background-color: rgb(76, 76, 95);
 }

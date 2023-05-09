@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        secondary: ['Anton', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
