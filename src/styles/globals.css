@@ -51,44 +51,49 @@
     src: url('/fonts/DidacticGothic-Regular.ttf') format('truetype');
   }
 
+  @font-face {
+    font-family: 'Cutive Mono', monospace;
+    src: url('/fonts/CutiveMono-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Vina Sans', sans-serif;
+    src: url('/fonts/VinaSans-Regular.ttf') format('truetype');
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
 
   /* #region  /**=========== Typography =========== */
-  .h0 {
-    font-family: 'Didactic Gothic', sans-serif;
-  }
-
   h1,
   .h1 {
-    font-family: 'Didactic Gothic', sans-serif;
+    @apply text-2xl font-bold md:text-4xl;
   }
 
   h2,
   .h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
+    @apply text-xl font-bold md:text-3xl;
   }
 
   h3,
   .h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
+    @apply text-lg font-bold md:text-2xl;
   }
 
   h4,
   .h4 {
-    @apply font-primary text-base font-bold md:text-lg;
+    @apply text-base font-bold md:text-lg;
   }
 
   body,
   .p {
-    @apply font-primary text-sm md:text-base;
+    @apply text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
 
   .layout {
-    /* 1100px */
-    max-width: 80rem;
+    max-width: 100rem;
     @apply mx-auto w-11/12;
   }
 
@@ -131,9 +136,26 @@
   font-family: 'Anton', sans-serif;
 }
 
-.hero-video-frame {
-  max-width: 260px;
+.main-title {
+  font-family: 'Anton', sans-serif;
 }
+
+#hero-container {
+  position: relative;
+  width: 100vw;
+}
+
+#hero-video {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 4px 6px -1px rgba(255, 255, 255, 0.1),
+    0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  left: 50%;
+  top: 50vh;
+  max-width: 200px;
+  max-height: 200px;
+}
+
 .hero-video-header {
-  background-color: rgb(76, 76, 95);
+  /*Background color that resembles a header of a modern operative system in dark mode*/
+  background-color: #1f1f1f;
 }
