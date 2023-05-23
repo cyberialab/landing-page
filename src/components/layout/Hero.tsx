@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+
+import { css } from '@emotion/react';
 import { gsap } from 'gsap';
 import * as React from 'react';
 import Typewriter from 'typewriter-effect';
@@ -8,17 +11,17 @@ export default function Hero() {
   React.useEffect(() => {
     window.addEventListener('mousemove', (e) => {
       gsap.to('#svg-hexa', {
-        duration: 0.5,
-        x: e.clientX,
-        y: e.clientY,
+        duration: 0.7,
+        x: e.clientX - 20,
+        y: e.clientY - 20,
       });
     });
 
     window.addEventListener('mousemove', (e) => {
       gsap.to('#svg-dot', {
-        duration: 0,
-        x: e.clientX,
-        y: e.clientY,
+        duration: 0.2,
+        x: e.clientX - 4,
+        y: e.clientY - 4,
       });
     });
   }, []);
@@ -70,25 +73,29 @@ export default function Hero() {
         <div className='absolute' id='svg-dot'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            width='3'
-            height='3'
-            viewBox='0 0 3 3'
+            width='6'
+            height='6'
+            viewBox='0 0 6 6'
           >
-            <circle cx='1.5' cy='1.5' r='1.5' fill='white' />
+            <circle cx='3' cy='3' r='3' fill='white' />
           </svg>
         </div>
-        <div className='absolute' id='svg-hexa'>
+        <div
+          className='absolute'
+          id='svg-hexa'
+          css={css`
+            mix-blend-mode: difference;
+          `}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            width='20'
-            height='20'
+            width='40'
+            height='40'
             viewBox='0 0 20 20'
           >
             <polygon
               points='10,2.5 16.7,6.5 16.7,13.5 10,17.5 3.3,13.5 3.3,6.5'
-              fill='none'
-              stroke='white'
-              stroke-width='1'
+              fill='white'
             />
           </svg>
         </div>{' '}

@@ -18,6 +18,12 @@ export default function HomePage() {
       <main>
         <Header />
         <Hero />
+        <section className='flex h-screen w-screen bg-black text-white'>
+          <div className='flex h-screen w-screen flex-col items-center justify-center gap-10'>
+            <h1 className='text-6xl font-bold'>CyberIA LABS</h1>
+            <h2 className='text-2xl font-bold'>We are prompt engineering</h2>
+          </div>
+        </section>
       </main>
     </Layout>
   );

@@ -14,7 +14,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 border-b border-dashed border-white bg-black'>
+    <header className='fixed top-0 z-50 w-screen border-b border-dashed border-white bg-black'>
       <div className='layout flex h-14 items-center justify-between'>
         <Image src='/images/logo.png' alt='Logo' width={30} height={30} />
         <nav className=''>
