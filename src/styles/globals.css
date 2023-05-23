@@ -61,6 +61,11 @@
     src: url('/fonts/VinaSans-Regular.ttf') format('truetype');
   }
 
+  @font-face {
+    font-family: 'Righteous';
+    src: url('/fonts/Righteous-Regular.ttf') format('truetype');
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
@@ -158,4 +163,17 @@
 .hero-video-header {
   /*Background color that resembles a header of a modern operative system in dark mode*/
   background-color: #1f1f1f;
+}
+
+.hero-title {
+  font-family: 'Righteous';
+  color: #fff;
+  min-height: 5rem;
+}
+
+.hero-subtitles {
+  font-family: 'Cutive Mono', monospace;
+  color: #fff;
+  font-size: 1.5rem;
+  min-height: 5rem;
 }

@@ -18,7 +18,6 @@ export default function HomePage() {
       <main>
         <Header />
         <Hero />
-        <section className='h-screen'></section>
       </main>
     </Layout>
   );
