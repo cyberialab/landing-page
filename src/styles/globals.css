@@ -114,12 +114,8 @@
 
 @layer utilities {
   .animated-underline {
-    background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(
-        to right,
-        var(--color-primary-400),
-        var(--color-primary-500)
-      );
+    background-image: linear-gradient(black, black),
+      linear-gradient(white, black);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -176,4 +172,62 @@
   color: #fff;
   font-size: 1.5rem;
   min-height: 5rem;
+}
+
+.join-us-button a:before,
+.join-us-button a:after {
+  content: 'JOIN US';
+}
+
+.contact-us-button a:before,
+.contact-us-button a:after {
+  content: 'CONTACT US';
+}
+
+.hero-button {
+  display: flex;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  width: 180px;
+  height: 55px;
+  margin: 2rem;
+  /* white glowing box-shadoow */
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
+}
+
+.hero-button a {
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  font-family: 'Anton', sans-serif;
+}
+
+.hero-button a:before,
+.hero-button a:after {
+  position: absolute;
+  width: 180px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+.hero-button a:before {
+  background: black;
+  color: white;
+  transform: translateZ(25px);
+}
+
+.hero-button a:after {
+  background: white;
+  color: black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.hero-button a:hover {
+  transform: rotateX(-90deg);
 }

@@ -4,7 +4,14 @@ import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
 
-const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
+const ButtonVariant = [
+  'primary',
+  'outline',
+  'ghost',
+  'light',
+  'dark',
+  'custom',
+] as const;
 const ButtonSize = ['sm', 'base'] as const;
 
 type ButtonProps = {

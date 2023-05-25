@@ -1,104 +1,161 @@
-/** @jsxImportSource @emotion/react */
-
-import { css } from '@emotion/react';
-import { gsap } from 'gsap';
 import * as React from 'react';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import type { Container, Engine } from 'tsparticles-engine';
 import Typewriter from 'typewriter-effect';
 
 import TweakableTitle from '@/components/titles/TweakableTitle';
 
 export default function Hero() {
-  React.useEffect(() => {
-    window.addEventListener('mousemove', (e) => {
-      gsap.to('#svg-hexa', {
-        duration: 0.7,
-        x: e.clientX - 20,
-        y: e.clientY - 20,
-      });
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      gsap.to('#svg-dot', {
-        duration: 0.2,
-        x: e.clientX - 4,
-        y: e.clientY - 4,
-      });
-    });
+  const particlesInit = React.useCallback(async (engine: Engine) => {
+    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
   }, []);
+
+  const particlesLoaded = React.useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
 
   return (
     <>
       <section
-        className='flex h-screen w-screen bg-black text-white'
+        className='flex h-screen w-screen flex-col bg-black text-white'
         id='hero-container'
       >
+        <Particles
+          id='tsparticles'
+          className='absolute left-0 top-0 z-0 h-full w-full'
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            fullScreen: { enable: false },
+            background: {
+              color: {
+                value: 'black',
+              },
+            },
+            fpsLimit: 50,
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: 'repulse',
+                },
+                resize: true,
+              },
+            },
+            particles: {
+              color: {
+                value: '#ffffff',
+              },
+              links: {
+                color: '#ffffff',
+                distance: 100,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                direction: 'none',
+                enable: true,
+                outModes: {
+                  default: 'bounce',
+                },
+                random: false,
+                speed: 6,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 1000,
+                },
+                value: 40,
+              },
+              opacity: {
+                value: 0.4,
+              },
+              shape: {
+                type: 'triangle',
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
+            },
+            detectRetina: true,
+          }}
+        />
         <div className='flex h-screen w-screen flex-col items-center justify-center gap-10'>
-          <TweakableTitle
-            text='CyberIA LABS'
-            className='hero-title '
-            titleClassName=''
-            angleScale={3}
-          ></TweakableTitle>
-
-          <div className='hero-subtitles'>
+          <div className='flex flex-1 flex-col justify-end'>
+            <TweakableTitle
+              text='CyberIA LABS'
+              className='hero-title '
+              titleClassName=''
+              angleScale={3}
+            ></TweakableTitle>
+          </div>
+          <div className='hero-subtitles flex flex-1 flex-col justify-center gap-2 pb-4'>
+            <div>
+              {' '}
+              Pioneering Innovation for a <b>Digital Revolution.</b>{' '}
+            </div>
+            <div>
+              {' '}
+              We take companies to the <b>next level.</b>{' '}
+            </div>
             <div className='flex'>
               <span className='mr-2'>We are </span>
               <Typewriter
                 options={{ loop: true }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString(' prompt engineering')
+                    .typeString('<b> prompt engineering </b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(' product design')
+                    .typeString('<b>product design</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(' software development')
+                    .typeString('<b> software development</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(' Web3')
+                    .typeString('<b> Web3</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(' artificial intelligence')
+                    .typeString('<b> artificial intelligence</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(' creative')
+                    .typeString('<b> creative</b>')
                     .deleteAll()
                     .start();
                 }}
               ></Typewriter>
             </div>
+            <div className='hero-buttons align-center flex justify-center'>
+              <span className='hero-button contact-us-button'>
+                <a href='#contact-us' />
+              </span>
+              <span className='hero-button join-us-button'>
+                <a href='#join-us' />
+              </span>
+            </div>
           </div>
         </div>
-        <div className='absolute' id='svg-dot'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='6'
-            height='6'
-            viewBox='0 0 6 6'
-          >
-            <circle cx='3' cy='3' r='3' fill='white' />
-          </svg>
+        <div className='relative mb-3 flex'>
+          <div className='h-2 flex-1 bg-white'></div>
+          <div
+            id='animated-circle-hero'
+            className='absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-solid border-white bg-white'
+          ></div>
+          <div className='h-2 flex-1 bg-white'></div>
         </div>
-        <div
-          className='absolute'
-          id='svg-hexa'
-          css={css`
-            mix-blend-mode: difference;
-          `}
-        >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='40'
-            height='40'
-            viewBox='0 0 20 20'
-          >
-            <polygon
-              points='10,2.5 16.7,6.5 16.7,13.5 10,17.5 3.3,13.5 3.3,6.5'
-              fill='white'
-            />
-          </svg>
-        </div>{' '}
       </section>
     </>
   );
