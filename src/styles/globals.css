@@ -184,6 +184,11 @@
   content: 'CONTACT US';
 }
 
+.go-to-button a:before,
+.go-to-button a:after {
+  content: 'Go to product page';
+}
+
 .hero-button {
   display: flex;
   font-size: 1.2rem;
@@ -230,4 +235,61 @@
 
 .hero-button a:hover {
   transform: rotateX(-90deg);
+}
+
+#animated-circle-hero {
+  font-family: 'Righteous';
+}
+
+#our-services-title {
+  text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.8);
+  margin-top: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Righteous';
+}
+
+.service-card {
+  margin-top: 3rem;
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
+}
+
+.branch-card.done-collapsed .service-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s max-height ease-out;
+}
+
+.branch-card .service-description {
+  max-height: auto;
+  overflow: hidden;
+  transition: 1s max-height ease-out;
+}
+
+.righteous {
+  font-family: 'Righteous';
+}
+
+.cutive {
+  font-family: 'Cutive Mono', monospace;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.didantic {
+  font-family: 'Didactic Gothic', sans-serif;
+}
+
+.vina {
+  font-family: 'Vina Sans', sans-serif;
+}
+
+.product-card {
+  min-height: 700px;
+}
+
+.fun-text-shadow {
+  text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.8);
 }

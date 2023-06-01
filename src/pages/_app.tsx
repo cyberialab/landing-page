@@ -5,7 +5,6 @@
 /** @jsxImportSource @emotion/react */
 
 import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { AppProps } from 'next/app';
 import React from 'react';
 
@@ -13,13 +12,10 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
 if (typeof window !== 'undefined') {
   window.addEventListener('mousemove', moveElements);
 }
 function moveElements(e: MouseEvent) {
-  console.log(e);
   gsap.to('#svg-hexa', {
     duration: 0.7,
     x: e.clientX - 20,

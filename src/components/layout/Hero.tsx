@@ -1,3 +1,5 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import * as React from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -21,6 +23,36 @@ export default function Hero() {
     []
   );
 
+  React.useEffect(() => {
+    // adding scroll trigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '#animated-circle-hero',
+          start: 'bottom bottom',
+          end: 'top center',
+          scrub: 1,
+          markers: true,
+        },
+      })
+      .add('start')
+      .to(
+        '#animated-circle-hero',
+        {
+          height: '1px',
+          width: '300px',
+          borderRadius: '10px',
+        },
+        'start'
+      );
+
+    return () => {
+      // removing scroll trigger
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
   return (
     <>
       <section
@@ -61,7 +93,7 @@ export default function Hero() {
                 width: 1,
               },
               collisions: {
-                enable: true,
+                enable: false,
               },
               move: {
                 direction: 'none',
@@ -72,22 +104,23 @@ export default function Hero() {
                 random: false,
                 speed: 6,
                 straight: false,
+                bounce: false,
               },
               number: {
                 density: {
                   enable: true,
                   area: 1000,
                 },
-                value: 40,
+                value: 20,
               },
               opacity: {
                 value: 0.4,
               },
               shape: {
-                type: 'triangle',
+                type: 'circle',
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 1, max: 2 },
               },
             },
             detectRetina: true,
@@ -105,11 +138,28 @@ export default function Hero() {
           <div className='hero-subtitles flex flex-1 flex-col justify-center gap-2 pb-4'>
             <div>
               {' '}
-              Pioneering Innovation for a <b>Digital Revolution.</b>{' '}
+              Pioneering innovation for a <b>digital revolution.</b>{' '}
             </div>
-            <div>
+            <div className='flex'>
               {' '}
-              We take companies to the <b>next level.</b>{' '}
+              <span className='mr-2'>We take </span>
+              <Typewriter
+                options={{ loop: true }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString('<b>start-ups</b>')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString('<b>companies</b>')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString('<b>products</b>')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .start();
+                }}
+              ></Typewriter>
+              <span> to the next level.</span>
             </div>
             <div className='flex'>
               <span className='mr-2'>We are </span>
@@ -152,7 +202,7 @@ export default function Hero() {
           <div className='h-2 flex-1 bg-white'></div>
           <div
             id='animated-circle-hero'
-            className='absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-solid border-white bg-white'
+            className='absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-solid border-white bg-white'
           ></div>
           <div className='h-2 flex-1 bg-white'></div>
         </div>
