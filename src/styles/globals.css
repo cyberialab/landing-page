@@ -133,10 +133,6 @@
   }
 }
 
-.custom-link {
-  font-family: 'Anton', sans-serif;
-}
-
 .main-title {
   font-family: 'Anton', sans-serif;
 }
@@ -251,6 +247,8 @@
 
 .service-card {
   margin-top: 3rem;
+  min-width: 350px;
+  max-width: 100%;
   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
 }
 
@@ -287,9 +285,62 @@
 }
 
 .product-card {
-  min-height: 700px;
+  min-height: 650px;
+}
+
+.product-card > div {
+  min-width: 400px;
+  overflow: hidden;
 }
 
 .fun-text-shadow {
   text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.8);
+}
+
+.us-card .top-image {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.us-card:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.us-card:hover .top-image {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us {
+  min-height: 600px;
+}
+
+.us-card-image {
+  min-height: 320px;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .hero-title h1 {
+    font-size: 4rem !important;
+  }
+
+  .hero-subtitles {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .hero-subtitles div {
+    justify-content: center;
+  }
+
+  .product-card {
+    font-size: 1rem !important;
+  }
+
+  .product-card > div {
+    min-height: 600px;
+    max-width: 100%;
+  }
 }

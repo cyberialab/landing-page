@@ -99,13 +99,13 @@ export default function Services() {
   return (
     <>
       <section
-        className='flex h-screen w-screen flex-col justify-center bg-black text-white'
-        id='services-container'
+        className='flex min-h-screen w-screen flex-col items-center justify-center bg-black text-white'
+        id='services'
       >
         <h2 className='text-center' id='our-services-title'>
           World class products engineering
         </h2>
-        <div className='mx-auto flex max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto flex max-w-7xl flex-wrap px-4 sm:px-6 lg:px-8'>
           {cardDefinitions.map((cardDefinition) => {
             return (
               <div
@@ -137,6 +137,9 @@ export default function Services() {
           })}
         </div>
       </section>
+      <div className='relative flex'>
+        <div className='h-2 flex-1 bg-white'></div>
+      </div>
     </>
   );
 }

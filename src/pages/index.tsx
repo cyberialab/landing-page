@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import AboutUs from '@/components/layout/AboutUs';
 import Header from '@/components/layout/Header';
 import Hero from '@/components/layout/Hero';
 import Layout from '@/components/layout/Layout';
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Hero />
         <Services />
         <Products />
+        <AboutUs />
       </main>
     </Layout>
   );

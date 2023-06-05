@@ -1,5 +1,3 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import * as React from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -23,41 +21,11 @@ export default function Hero() {
     []
   );
 
-  React.useEffect(() => {
-    // adding scroll trigger
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '#animated-circle-hero',
-          start: 'bottom bottom',
-          end: 'top center',
-          scrub: 1,
-          markers: true,
-        },
-      })
-      .add('start')
-      .to(
-        '#animated-circle-hero',
-        {
-          height: '1px',
-          width: '300px',
-          borderRadius: '10px',
-        },
-        'start'
-      );
-
-    return () => {
-      // removing scroll trigger
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
   return (
     <>
       <section
         className='flex h-screen w-screen flex-col bg-black text-white'
-        id='hero-container'
+        id='hero'
       >
         <Particles
           id='tsparticles'
@@ -65,7 +33,6 @@ export default function Hero() {
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
-            fullScreen: { enable: false },
             background: {
               color: {
                 value: 'black',
@@ -126,11 +93,11 @@ export default function Hero() {
             detectRetina: true,
           }}
         />
-        <div className='flex h-screen w-screen flex-col items-center justify-center gap-10'>
-          <div className='flex flex-1 flex-col justify-end'>
+        <div className='flex min-h-screen w-screen flex-col items-center justify-center gap-10'>
+          <div className='flex flex-1 flex-col items-center justify-end'>
             <TweakableTitle
               text='CyberIA LABS'
-              className='hero-title '
+              className='hero-title text-center'
               titleClassName=''
               angleScale={3}
             ></TweakableTitle>
@@ -167,22 +134,22 @@ export default function Hero() {
                 options={{ loop: true }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('<b> prompt engineering </b>')
+                    .typeString('<b> prompt engineering.</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString('<b>product design</b>')
+                    .typeString('<b>product design.</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString('<b> software development</b>')
+                    .typeString('<b> software development.</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString('<b> Web3</b>')
+                    .typeString('<b> Web3.</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString('<b> artificial intelligence</b>')
+                    .typeString('<b> artificial intelligence.</b>')
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString('<b> creative</b>')
+                    .typeString('<b> creative.</b>')
                     .deleteAll()
                     .start();
                 }}

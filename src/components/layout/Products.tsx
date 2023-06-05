@@ -5,8 +5,8 @@ export default function Products() {
   return (
     <>
       <section
-        className='flex h-screen w-screen flex-col justify-center bg-black text-white'
-        id='services-container'
+        className='flex min-h-screen w-screen flex-col justify-center bg-black text-white'
+        id='products'
       >
         <div className='m-auto max-w-7xl'>
           <h2 className='mb-3 text-center' id='our-services-title'>
@@ -17,10 +17,10 @@ export default function Products() {
               <Image src='/images/provok.png' fill alt='provok' />
             </div>
             <div className='flex flex-1 flex-col justify-between p-7'>
-              <div className='righteous fun-text-shadow text-4xl'>
+              <div className='righteous fun-text-shadow text-3xl'>
                 Provok.ai
               </div>
-              <div className='cutive text-md mt-3 text-2xl'>
+              <div className='cutive text-md mt-3 text-xl'>
                 Provok.ai is a digital magazine that uses AI to generate
                 content. Every month a new issues comes out, and every month the
                 AI gets a little bit smarter. Collaborating with brands and
@@ -29,13 +29,16 @@ export default function Products() {
 
               <div className='align-center flex justify-center'>
                 <span className='hero-button go-to-button'>
-                  <a href='https://provok.ai' />
+                  <a href='https://provok.ai' target='_blank' />
                 </span>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className='relative flex'>
+        <div className='h-2 flex-1 bg-white'></div>
+      </div>
     </>
   );
 }

@@ -3,19 +3,14 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
+  title: 'CyberIA LABS',
+  siteName: 'CyberIA Labs Landing page',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    'Pioneering innovation for a digital revolution. We take start-ups, companies and products to the next level. We are prompt engineering, product design, software development, Web3, artificial intelligence and creative.',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',
   robots: 'follow, index',
-  /**
-   * No need to be filled, will be populated with openGraph function
-   * If you wish to use a normal image, just specify the path below
-   */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
 };
 
 type SeoProps = {

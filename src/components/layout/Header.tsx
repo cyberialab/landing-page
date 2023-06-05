@@ -4,17 +4,15 @@ import * as React from 'react';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
 const links = [
-  { href: '/', label: 'WORK' },
-  { href: '/', label: 'OUR STACK' },
-  { href: '/', label: 'PRODUCTS' },
-  { href: '/', label: 'SERVICES' },
-  { href: '/', label: 'ABOUT US' },
-  { href: '/', label: 'CONTACT US' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#products', label: 'Products' },
+  { href: '/#about-us', label: 'About us' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Header() {
   return (
-    <header className='fixed top-0 z-50 w-screen border-b border-dashed border-white bg-black'>
+    <header className='righteous fixed top-0 z-50 w-screen border-b border-dashed border-white bg-black'>
       <div className='layout flex h-14 items-center justify-between'>
         <Image src='/images/logo.png' alt='Logo' width={30} height={30} />
         <nav className=''>
