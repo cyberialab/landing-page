@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import AboutUs from '@/components/layout/AboutUs';
+import GetInTouch from '@/components/layout/GetInTouch';
 import Header from '@/components/layout/Header';
 import Hero from '@/components/layout/Hero';
 import Layout from '@/components/layout/Layout';
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Services />
         <Products />
         <AboutUs />
+        <GetInTouch />
       </main>
     </Layout>
   );

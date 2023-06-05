@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <>
       <section
-        className='about-us flex w-screen flex-col justify-center bg-black py-10 text-white'
+        className='border-dashed-2 about-us flex w-screen flex-col justify-center border-b border-white bg-black py-10 text-white'
         id='about-us'
       >
         <h2 className='mb-5 text-center' id='our-services-title'>

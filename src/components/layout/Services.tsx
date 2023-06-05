@@ -99,7 +99,7 @@ export default function Services() {
   return (
     <>
       <section
-        className='flex min-h-screen w-screen flex-col items-center justify-center bg-black text-white'
+        className='border-dashed-2 flex min-h-screen w-screen flex-col items-center justify-center border-b border-white bg-black pb-4 text-white'
         id='services'
       >
         <h2 className='text-center' id='our-services-title'>
@@ -137,9 +137,6 @@ export default function Services() {
           })}
         </div>
       </section>
-      <div className='relative flex'>
-        <div className='h-2 flex-1 bg-white'></div>
-      </div>
     </>
   );
 }

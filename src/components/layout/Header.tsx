@@ -7,7 +7,7 @@ const links = [
   { href: '/#services', label: 'Services' },
   { href: '/#products', label: 'Products' },
   { href: '/#about-us', label: 'About us' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/#get-in-touch', label: 'Get in touch' },
 ];
 
 export default function Header() {

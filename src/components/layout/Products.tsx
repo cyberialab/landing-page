@@ -5,7 +5,7 @@ export default function Products() {
   return (
     <>
       <section
-        className='flex min-h-screen w-screen flex-col justify-center bg-black text-white'
+        className='border-dashed-2 flex min-h-screen w-screen flex-col justify-center border-b border-white bg-black text-white'
         id='products'
       >
         <div className='m-auto max-w-7xl'>
@@ -36,9 +36,6 @@ export default function Products() {
           </div>
         </div>
       </section>
-      <div className='relative flex'>
-        <div className='h-2 flex-1 bg-white'></div>
-      </div>
     </>
   );
 }

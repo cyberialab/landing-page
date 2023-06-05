@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <>
       <section
-        className='flex h-screen w-screen flex-col bg-black text-white'
+        className='border-dashed-2 flex h-screen w-screen flex-col border-b border-white bg-black text-white'
         id='hero'
       >
         <Particles
@@ -157,21 +157,13 @@ export default function Hero() {
             </div>
             <div className='hero-buttons align-center flex justify-center'>
               <span className='hero-button contact-us-button'>
-                <a href='#contact-us' />
+                <a href='mailto:jmromeroe@gmail.com?subject=Business opportunity' />
               </span>
               <span className='hero-button join-us-button'>
-                <a href='#join-us' />
+                <a href='mailto:jmromeroe@gmail.com?subject=Sending CV for future opportunities' />
               </span>
             </div>
           </div>
-        </div>
-        <div className='relative mb-3 flex'>
-          <div className='h-2 flex-1 bg-white'></div>
-          <div
-            id='animated-circle-hero'
-            className='absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-solid border-white bg-white'
-          ></div>
-          <div className='h-2 flex-1 bg-white'></div>
         </div>
       </section>
     </>
