@@ -17,13 +17,13 @@ export default function AboutUs() {
               <div className='us-card-image relative overflow-hidden rounded-md'>
                 <Image
                   className='absolute top-0'
-                  src='/images/jose2.jpeg'
+                  src='/images/jose1.jpg'
                   alt='jose1'
                   fill
                 />
                 <Image
                   className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/jose1.jpeg'
+                  src='/images/jose2.jpg'
                   alt='jose1'
                   fill
                 />
@@ -39,65 +39,21 @@ export default function AboutUs() {
               <div className='us-card-image relative top-0 flex h-full w-full items-center justify-center overflow-hidden rounded-md'>
                 <Image
                   className='absolute top-0'
-                  src='/images/jose2.jpeg'
+                  src='/images/diego1.jpg'
                   alt='jose1'
                   fill
                 />
                 <Image
                   className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/jose1.jpeg'
+                  src='/images/diego2.jpg'
                   alt='jose1'
                   fill
                 />
               </div>
               <div>
                 <div>
-                  <div className='righteous text-3xl'> Jose Romero </div>
-                  <div className='cutive'> Co-founder & Tech guy</div>
-                </div>
-              </div>
-            </div>
-            <div className='us-card relative mx-5 my-8 flex cursor-pointer flex-col'>
-              <div className='us-card-image relative top-0 flex h-full w-full items-center justify-center overflow-hidden rounded-md'>
-                <Image
-                  className='absolute top-0'
-                  src='/images/jose2.jpeg'
-                  alt='jose1'
-                  fill
-                />
-                <Image
-                  className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/jose1.jpeg'
-                  alt='jose1'
-                  fill
-                />
-              </div>
-              <div>
-                <div>
-                  <div className='righteous text-3xl'> Jose Romero </div>
-                  <div className='cutive'> Co-founder & Tech guy</div>
-                </div>
-              </div>
-            </div>
-            <div className='us-card relative mx-5 my-8 flex cursor-pointer flex-col'>
-              <div className='us-card-image relative top-0 flex w-full flex-1 items-center justify-center overflow-hidden rounded-md'>
-                <Image
-                  className='absolute top-0'
-                  src='/images/jose2.jpeg'
-                  alt='jose1'
-                  fill
-                />
-                <Image
-                  className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/jose1.jpeg'
-                  alt='jose1'
-                  fill
-                />
-              </div>
-              <div>
-                <div>
-                  <div className='righteous text-3xl'> Jose Romero </div>
-                  <div className='cutive'> Co-founder & Tech guy</div>
+                  <div className='righteous text-3xl'> Diego Salazar </div>
+                  <div className='cutive'> Co-founder & Product guy</div>
                 </div>
               </div>
             </div>

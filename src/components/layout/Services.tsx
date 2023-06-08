@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import * as React from 'react';
 
 export default function Services() {
   const cardDefinitions = [
     {
       title: 'Product',
-      image: '/images/software-development.png',
+      image: '/images/product.png',
       description:
         'Coffee + Code + Time + Talent = Awesome products. \nWe build products you will love using the best technologies and frameworks for each use case.',
       branches: [
@@ -33,7 +34,7 @@ export default function Services() {
     },
     {
       title: 'Web 3',
-      image: '/images/software-development.png',
+      image: '/images/web3.png',
       listOfItems: [''],
       description:
         'Building the future of economy one block at a time! Sprinkling decentralized magic and smart contracts all over the digital realm.',
@@ -66,7 +67,7 @@ export default function Services() {
     },
     {
       title: 'AI/Prompt',
-      image: '/images/software-development.png',
+      image: '/images/ml.png',
       listOfItems: [''],
       description:
         'We turn prompts into spells, and algorithms into potions, for the benefit of your business.',
@@ -113,9 +114,21 @@ export default function Services() {
                 key={cardDefinition.title}
               >
                 <div className='righteous service-card-description flex flex-1  flex-col justify-between rounded-lg p-10'>
-                  <h1 className='service-title text-3xl'>
-                    {cardDefinition.title}
-                  </h1>
+                  <div className='flex items-center'>
+                    <div className='flex-1'>
+                      <h1 className='service-title text-3xl'>
+                        {cardDefinition.title}
+                      </h1>
+                    </div>
+                    <div>
+                      <Image
+                        src={cardDefinition.image}
+                        width={50}
+                        height={50}
+                        alt={cardDefinition.title}
+                      />
+                    </div>
+                  </div>
                   <div className='cutive service-description text-md mt-3'>
                     {cardDefinition.description}
                   </div>
