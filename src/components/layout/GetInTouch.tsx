@@ -7,9 +7,7 @@ export default function GetInTouch() {
         className='border-dashed-2 about-us flex w-screen flex-col justify-center border-b border-white bg-black py-10 text-white'
         id='get-in-touch'
       >
-        <h2 className='mb-5 text-center' id='our-services-title'>
-          Get in touch
-        </h2>
+        <h2 className='fun-text-shadow mb-5 text-center'>Get in touch</h2>
         <div className='hero-buttons align-center flex flex-wrap justify-center'>
           <span className='hero-button contact-us-button'>
             <a href='mailto:jmromeroe@gmail.com?subject=Business opportunity' />

@@ -103,7 +103,7 @@ export default function Services() {
         className='border-dashed-2 flex min-h-screen w-screen flex-col items-center justify-center border-b border-white bg-black pb-4 text-white'
         id='services'
       >
-        <h2 className='text-center' id='our-services-title'>
+        <h2 className='fun-text-shadow text-center'>
           World class products engineering
         </h2>
         <div className='mx-auto flex max-w-7xl flex-wrap px-4 sm:px-6 lg:px-8'>

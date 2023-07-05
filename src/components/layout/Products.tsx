@@ -8,9 +8,7 @@ export default function Products() {
         id='products'
       >
         <div className='m-auto max-w-7xl'>
-          <h2 className='mb-3 text-center' id='our-services-title'>
-            Products
-          </h2>
+          <h2 className='fun-text-shadow mb-3 text-center'>Products</h2>
           <div className='product-card flex w-full flex-wrap justify-center rounded-md border-2 border-solid border-white'>
             <div className='relative flex-1'>
               <img src='/images/provok.png' alt='provok' />

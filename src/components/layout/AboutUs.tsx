@@ -8,9 +8,7 @@ export default function AboutUs() {
         className='border-dashed-2 about-us flex w-screen flex-col justify-center border-b border-white bg-black py-10 text-white'
         id='about-us'
       >
-        <h2 className='mb-5 text-center' id='our-services-title'>
-          About Us
-        </h2>
+        <h2 className='fun-text-shadow mb-5 text-center'>About Us</h2>
         <div className='m-auto max-w-7xl'>
           <div className='us-cards flex w-full flex-wrap justify-center'>
             <div className='us-card mx-5 my-8 flex cursor-pointer flex-col'>

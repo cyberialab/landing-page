@@ -51,7 +51,6 @@ const TweakableTitle = React.forwardRef<HTMLAnchorElement, TweakableTitleProps>(
             letter-spacing: 0.5rem;
             word-wrap: break-word;
             line-height: 1.2;
-            text-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
           `}
         >
           {text}

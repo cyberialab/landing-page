@@ -242,7 +242,6 @@
 }
 
 #our-services-title {
-  text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.8);
   margin-top: 2rem;
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -299,7 +298,7 @@
 }
 
 .fun-text-shadow {
-  text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.8);
 }
 
 .us-card .top-image {
@@ -365,6 +364,10 @@
 
   .fun-text-shadow {
     text-shadow: 0 0 0.1rem rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-button a:hover {
+    transform: none;
   }
 }
 
