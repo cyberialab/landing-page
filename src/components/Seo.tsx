@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'CyberIA LABS',
-  siteName: 'CyberIA Labs Landing page',
+  title: 'CyberIA Lab',
+  siteName: 'CyberIA Lab Landing page',
   description:
     'Pioneering innovation for a digital revolution. We take start-ups, companies and products to the next level. We are prompt engineering, product design, software development, Web3, artificial intelligence and creative.',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
