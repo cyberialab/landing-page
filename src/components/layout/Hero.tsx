@@ -96,7 +96,7 @@ export default function Hero() {
         <div className='flex min-h-screen w-screen flex-col items-center justify-center gap-10'>
           <div className='flex flex-1 flex-col items-center justify-end'>
             <TweakableTitle
-              text='CyberIA LABS'
+              text='CyberIA Lab'
               className='hero-title text-center'
               titleClassName=''
               angleScale={3}
