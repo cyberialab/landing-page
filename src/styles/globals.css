@@ -189,12 +189,14 @@
   display: flex;
   font-size: 1.2rem;
   position: relative;
-  display: flex;
+  display: inline-flex;
   width: 180px;
   height: 55px;
   margin: 2rem;
+  overflow: hidden;
   /* white glowing box-shadoow */
   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
+  perspective: 1000px;
 }
 
 .hero-button a {
@@ -202,6 +204,7 @@
   transform-style: preserve-3d;
   cursor: pointer;
   font-family: 'Anton', sans-serif;
+  width: 100%;
 }
 
 .hero-button a:before,
@@ -215,6 +218,7 @@
   border: 3px solid white;
   box-sizing: border-box;
   border-radius: 7px;
+  max-width: 100%;
 }
 
 .hero-button a:before {
@@ -285,11 +289,12 @@
 }
 
 .product-card {
-  min-height: 650px;
+  margin: 1rem;
 }
 
 .product-card > div {
   min-width: 400px;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -343,4 +348,61 @@
     min-height: 600px;
     max-width: 100%;
   }
+
+  .hero-button {
+    margin: 0.5rem;
+  }
+
+  img {
+    max-width: 100vw !important;
+    height: auto;
+  }
+
+  .service-card {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+/*
+ * BURGUER MENU
+ */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 20px;
+  top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: black;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  color: black;
+  opacity: 0.9;
 }

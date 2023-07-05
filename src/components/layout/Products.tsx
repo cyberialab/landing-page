@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import * as React from 'react';
 
 export default function Products() {
@@ -14,7 +13,7 @@ export default function Products() {
           </h2>
           <div className='product-card flex w-full flex-wrap justify-center rounded-md border-2 border-solid border-white'>
             <div className='relative flex-1'>
-              <Image src='/images/provok.png' fill alt='provok' />
+              <img src='/images/provok.png' alt='provok' />
             </div>
             <div className='flex flex-1 flex-col justify-between p-7'>
               <div className='righteous fun-text-shadow text-3xl'>

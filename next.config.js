@@ -3,16 +3,13 @@ const nextConfig = {
   eslint: {
     dirs: ['src'],
   },
-
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export',
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
+  images: {
+    unoptimized: true,
+  },
 
   // SVGR
   webpack(config) {

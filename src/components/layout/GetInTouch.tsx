@@ -10,7 +10,7 @@ export default function GetInTouch() {
         <h2 className='mb-5 text-center' id='our-services-title'>
           Get in touch
         </h2>
-        <div className='hero-buttons align-center flex justify-center'>
+        <div className='hero-buttons align-center flex flex-wrap justify-center'>
           <span className='hero-button contact-us-button'>
             <a href='mailto:jmromeroe@gmail.com?subject=Business opportunity' />
           </span>

@@ -19,7 +19,7 @@ export default function HomePage() {
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
-      <main>
+      <main id='page-wrap'>
         <Header />
         <Hero />
         <Services />

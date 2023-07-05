@@ -155,7 +155,7 @@ export default function Hero() {
                 }}
               ></Typewriter>
             </div>
-            <div className='hero-buttons align-center flex justify-center'>
+            <div className='hero-buttons align-center flex flex-wrap justify-center'>
               <span className='hero-button contact-us-button'>
                 <a href='mailto:jmromeroe@gmail.com?subject=Business opportunity' />
               </span>
