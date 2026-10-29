@@ -10,6 +10,8 @@ import {
   HiPlus,
 } from 'react-icons/hi';
 
+import { withBase } from '@/lib/helper';
+
 import Button from '@/components/buttons/Button';
 import IconButton from '@/components/buttons/IconButton';
 import TextButton from '@/components/buttons/TextButton';
@@ -444,7 +446,7 @@ export default function ComponentsPage() {
                 <NextImage
                   useSkeleton
                   className='w-32 md:w-40'
-                  src='/favicon/android-chrome-192x192.png'
+                  src={withBase('/favicon/android-chrome-192x192.png')}
                   width='180'
                   height='180'
                   alt='Icon'

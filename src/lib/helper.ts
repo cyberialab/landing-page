@@ -1,3 +1,12 @@
+/**
+ * Prefix a root-relative public/ path with the site's basePath.
+ * next/image (unoptimized), <img>, <link> and CSS do not add it on their own,
+ * which breaks the site when it is served from a subpath (GitHub Pages).
+ */
+export function withBase(path: string): string {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
+}
+
 type OpenGraphType = {
   siteName: string;
   description: string;

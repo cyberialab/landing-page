@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import * as React from 'react';
 
+import { withBase } from '@/lib/helper';
+
 export default function AboutUs() {
   return (
     <>
@@ -15,13 +17,13 @@ export default function AboutUs() {
               <div className='us-card-image relative overflow-hidden rounded-md'>
                 <Image
                   className='absolute top-0'
-                  src='/images/jose1.jpg'
+                  src={withBase('/images/jose1.jpg')}
                   alt='jose1'
                   fill
                 />
                 <Image
                   className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/jose2.jpg'
+                  src={withBase('/images/jose2.jpg')}
                   alt='jose1'
                   fill
                 />
@@ -37,13 +39,13 @@ export default function AboutUs() {
               <div className='us-card-image relative top-0 flex h-full w-full items-center justify-center overflow-hidden rounded-md'>
                 <Image
                   className='absolute top-0'
-                  src='/images/diego1.jpg'
+                  src={withBase('/images/diego1.jpg')}
                   alt='jose1'
                   fill
                 />
                 <Image
                   className='top-image absolute top-0 z-10 opacity-0'
-                  src='/images/diego2.jpg'
+                  src={withBase('/images/diego2.jpg')}
                   alt='jose1'
                   fill
                 />
