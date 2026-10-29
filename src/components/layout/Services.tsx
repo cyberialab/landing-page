@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import * as React from 'react';
 
+import { withBase } from '@/lib/helper';
+
 export default function Services() {
   const cardDefinitions = [
     {
       title: 'Product',
-      image: '/images/product.png',
+      image: withBase('/images/product.png'),
       description:
         'Coffee + Code + Time + Talent = Awesome products. \nWe build products you will love using the best technologies and frameworks for each use case.',
       branches: [
@@ -34,7 +36,7 @@ export default function Services() {
     },
     {
       title: 'Web 3',
-      image: '/images/web3.png',
+      image: withBase('/images/web3.png'),
       listOfItems: [''],
       description:
         'Building the future of economy one block at a time! Sprinkling decentralized magic and smart contracts all over the digital realm.',
@@ -67,7 +69,7 @@ export default function Services() {
     },
     {
       title: 'AI/Prompt',
-      image: '/images/ml.png',
+      image: withBase('/images/ml.png'),
       listOfItems: [''],
       description:
         'We turn prompts into spells, and algorithms into potions, for the benefit of your business.',

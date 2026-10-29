@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { withBase } from '@/lib/helper';
+
 export default function Products() {
   return (
     <>
@@ -11,7 +13,7 @@ export default function Products() {
           <h2 className='fun-text-shadow mb-3 text-center'>Products</h2>
           <div className='product-card flex w-full flex-wrap justify-center rounded-md border-2 border-solid border-white'>
             <div className='relative flex-1'>
-              <img src='/images/provok.png' alt='provok' />
+              <img src={withBase('/images/provok.png')} alt='provok' />
             </div>
             <div className='flex flex-1 flex-col justify-between p-7'>
               <div className='righteous fun-text-shadow text-3xl'>
